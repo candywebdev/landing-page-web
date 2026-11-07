@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finca El Sembrador</title>
+
+    <style>
+      /* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+
+body{
+    font-family:Arial, sans-serif;
+    background-color:#f8f8f8;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background-color:#2e7d32;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav ul{
+    list-style:none;
+    margin-top:15px;
+}
+
+nav ul li{
+    display:inline-block;
+    margin:10px;
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    background-color:#4caf50;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    transition:all 0.3s ease;
+
+}
+
+nav ul li a:hover{
+
+    background-color:#66bb6a;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 15px rgba(76,175,80,0.35);
+
+}
+
+/* SECCIONES */
+
+section{
+    padding:40px;
+    text-align:center;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+/* IMÁGENES GENERALES */
+
+img{
+    max-width:100%;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+/* HERO */
+
+#inicio{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#inicio img{
+
+    width:1300px;
+
+    max-width:100%;
+
+    height:auto;
+
+    border-radius:20px;
+
+    box-shadow:0 0 35px rgba(76,175,80,0.25);
+
+    transition:all 0.4s ease;
+
+}
+
+/* =========================
+   CONTENEDOR IMAGEN HERO
+   ========================= */
+
+.hero-imagen{
+
+    position:relative;
+
+    display:inline-block;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+/* =========================
+   EFECTO IMAGEN PRINCIPAL
+   ========================= */
+
+#inicio img:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 30px rgba(76,175,80,0.35);
+
+}
+
+#inicio p{
+    margin-bottom:25px;
+}
+
+#inicio a{
+    display:inline-block;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+#inicio a:hover{
+    background-color:#2e7d32;
+    transform:translateY(-3px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* SOBRE LA FINCA */
+
+#finca{
+    padding:60px 20px;
+}
+
+#finca img{
+
+    width:600px;
+
+    max-width:100%;
+
+    height:auto;
+
+    border-radius:15px;
+
+    box-shadow:0 0 25px rgba(76,175,80,0.25);
+
+    transition:all 0.3s ease;
+
+}
+
+/* =========================
+   EFECTO IMAGEN FINCA
+   ========================= */
+
+#finca img:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 25px rgba(76,175,80,0.35);
+
+}
+
+#finca p{
+    max-width:800px;
+    margin:15px auto;
+    line-height:1.8;
+}
+
+/* =========================
+   PRODUCTOS
+   ========================= */
+
+#productos{
+    text-align:center;
+}
+
+#productos article{
+    width:300px;
+    display:inline-block;
+    vertical-align:top;
+
+    background:white;
+
+    margin:20px;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+    transition:all 0.3s ease;
+}
+
+/* =========================
+   EFECTO TARJETAS PRODUCTOS
+   ========================= */
+
+#productos article:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 12px 25px rgba(76,175,80,0.25);
+
+}
+
+/* =========================
+   IMÁGENES PRODUCTOS
+   ========================= */
+
+#productos img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    transition:all 0.3s ease;
+
+}
+
+/* =========================
+   EFECTO IMÁGENES PRODUCTOS
+   ========================= */
+
+#productos img:hover{
+
+    box-shadow:0 0 20px rgba(76,175,80,0.35);
+
+}
+
+/* =========================
+   BENEFICIOS
+   ========================= */
+
+#beneficios article{
+
+    max-width:900px;
+
+    margin:15px auto;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+    border:2px solid transparent;
+
+    transition:all 0.3s ease;
+
+}
+
+#beneficios article:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#4caf50;
+
+    box-shadow:0 12px 25px rgba(76,175,80,0.25);
+
+}
+
+/* =========================
+   GALERÍA
+   ========================= */
+
+#galeria img{
+
+    width:300px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    margin:10px;
+
+    border-radius:10px;
+
+    padding:5px;
+
+    background:white;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+    transition:all 0.3s ease;
+
+}
+
+#galeria img:hover{
+
+    transform:translateY(-5px) scale(1.15);
+
+    box-shadow:0 15px 30px rgba(76,175,80,0.30);
+
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+
+a,
+button{
+
+    background-color:#4caf50;
+
+    color:white;
+
+    padding:12px 20px;
+
+    text-decoration:none;
+
+    border:none;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+a:hover,
+button:hover{
+
+    background-color:#388e3c;
+
+}
+
+/* =========================
+   SECCIÓN RESERVA TU CAJA
+   ========================= */
+
+#reserva img{
+
+    width:710px;
+
+    max-width:100%;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 0 35px rgba(76,175,80,0.35);
+
+}
+
+/* =========================
+   TÍTULO RESERVA TU CAJA
+   ========================= */
+
+#reserva h2{
+
+    margin-top:25px;
+
+    margin-bottom:20px;
+
+}
+
+/* =========================
+   TEXTO DESCRIPTIVO
+   ========================= */
+
+.texto-reserva{
+
+    max-width:550px;
+
+    margin:0 auto 35px auto;
+
+    text-align:center;
+
+    line-height:1.7;
+
+}
+
+/* =========================
+   FORMULARIO RESERVA
+   ========================= */
+
+#reserva form{
+
+    background-color:#f9fff9;
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+    transition:all 0.4s ease;
+
+}
+
+/* =========================
+   EFECTO FORMULARIO
+   ========================= */
+
+#reserva form:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 30px rgba(76,175,80,0.25);
+
+}
+
+/* =========================
+   CAMPOS DEL FORMULARIO
+   ========================= */
+
+input{
+
+    width:100%;
+
+    padding:10px;
+
+    margin:10px 0;
+
+    background-color:#fcfffc;
+
+    border:1px solid #c8e6c9;
+
+    border-radius:8px;
+
+    box-shadow:0 0 5px rgba(76,175,80,0.15);
+
+    transition:all 0.3s ease;
+
+}
+
+/* =========================
+   EFECTO HOVER INPUT
+   ========================= */
+
+input:hover{
+
+    border:1px solid #4caf50;
+
+    box-shadow:0 0 10px rgba(76,175,80,0.25);
+
+}
+
+/* =========================
+   EFECTO FOCUS INPUT
+   ========================= */
+
+input:focus{
+
+    background-color:white;
+
+    border:2px solid #4caf50;
+
+    box-shadow:0 0 12px rgba(76,175,80,0.35);
+
+    outline:none;
+
+}
+
+/* FOOTER */
+
+footer{
+    background-color:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* =========================
+   BOTÓN VOLVER ARRIBA
+   ========================= */
+
+#volverArriba{
+
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background-color: #2e7d32;
+    color: white;
+
+    border: none;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: block;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    transition: 0.3s;
+}
+
+/* =========================
+   EFECTO HOVER DEL BOTÓN
+   ========================= */
+
+#volverArriba:hover{
+
+    transform: scale(1.1);
+    background-color: #388e3c;
+
+}
+
+
+/* =========================
+   SECCIÓN RESERVA TU CAJA
+   ========================= */
+
+#reserva img{
+    width:710px;
+    max-width:100%;
+    border-radius:15px;
+    margin-bottom:20px;
+
+    box-shadow:0 0 35px rgba(76,175,80,0.35);
+}
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+#reserva form{
+    background-color:#f9fff9;
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+
+    transition:all 0.4s ease;
+}
+
+/* =========================
+   EFECTO FORMULARIO
+   ========================= */
+
+#reserva form:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 30px rgba(76,175,80,0.25);
+
+}
+
+/* =========================
+   CAMPOS DEL FORMULARIO
+   ========================= */
+
+input{
+    width:100%;
+
+    padding:10px;
+
+    margin:10px 0;
+
+    background-color:#fcfffc;
+
+    border:1px solid #c8e6c9;
+
+    border-radius:8px;
+
+    box-shadow:0 0 5px rgba(76,175,80,0.15);
+
+    transition:all 0.3s ease;
+}
+
+/* =========================
+   EFECTO HOVER INPUT
+   ========================= */
+
+input:hover{
+
+    border:1px solid #4caf50;
+
+    box-shadow:0 0 10px rgba(76,175,80,0.25);
+
+}
+
+/* =========================
+   EFECTO FOCUS INPUT
+   ========================= */
+
+input:focus{
+
+    background-color:white;
+
+    border:2px solid #4caf50;
+
+    box-shadow:0 0 12px rgba(76,175,80,0.35);
+
+    outline:none;
+
+}
+
+/* =========================
+   IMAGEN RESERVA TU CAJA
+   ========================= */
+
+.imagen-reserva{
+    width:710px;
+    max-width:100%;
+    border-radius:15px;
+    display:block;
+    margin:0 auto 30px auto;
+}
+
+/* =========================
+   TÍTULO RESERVA TU CAJA
+   ========================= */
+
+#reserva h2{
+    margin-top:25px;
+    margin-bottom:20px;
+}
+
+/* =========================
+   TEXTO DESCRIPTIVO
+   ========================= */
+
+.texto-reserva{
+    max-width:550px;
+    margin:0 auto 35px auto;
+    text-align:center;
+    line-height:1.7;
+}
+
+/* =========================
+   MOSTRAR CONTRASEÑA
+   ========================= */
+
+label:has(#mostrarPassword){
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:10px;
+
+}
+
+#mostrarPassword{
+
+    width:auto;
+
+    margin:0;
+
+    box-shadow:none;
+
+    cursor:pointer;
+
+}
+
+
+
+/* =========================
+   DESTELLO SUAVE HERO
+   ========================= */
+
+.hero-imagen::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-150px;
+
+    width:30px;
+
+    height:100%;
+
+    background:linear-gradient(
+        to right,
+        transparent,
+        rgba(220,255,220,0.08),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    animation:destelloHero 25s infinite;
+
+    pointer-events:none;
+
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer-contenido{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+footer nav{
+
+    display:flex;
+
+    gap:15px;
+
+    margin:15px 0;
+
+}
+
+
+
+@keyframes destelloHero{
+
+    0%{
+        left:-150px;
+    }
+
+    100%{
+        left:110%;
+    }
+
+}
+
+/* =========================
+   RESPONSIVE MÓVIL
+   ========================= */
+
+@media (max-width:768px){
+
+    nav ul li{
+        display:block;
+        margin:10px 0;
+    }
+
+    #productos article{
+        width:90%;
+        margin:20px auto;
+        display:block;
+    }
+
+    #galeria img{
+        width:90%;
+        height:auto;
+    }
+
+    #reserva form{
+        width:95%;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.5rem;
+    }
+
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>FINCA EL SEMBRADOR</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#finca">La Finca</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#reserva">Reserva tu Caja</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+
+        <section id="inicio">
+
+            <div class="hero-imagen">
+                <img src="img/portada.png" alt="Finca El Sembrador">
+            </div>
+
+            <h2>Verduras Frescas Directamente del Campo</h2>
+
+            <p>
+                Cultivamos productos de temporada de forma natural y sostenible.
+                Reserva tu caja de verduras frescas y disfruta del auténtico sabor local.
+            </p>
+
+            <a href="#reserva">Reserva tu Caja</a>
+
+        </section>
+
+        <!-- SOBRE LA FINCA -->
+
+        <section id="finca">
+
+            <h2>Sobre la Finca</h2>
+
+            <img src="img/farmer working fields.png" alt="Agricultor trabajando">
+            <p>
+                Finca El Sembrador es una explotación agrícola familiar dedicada al cultivo de verduras frescas de temporada.
+                Nuestro objetivo es ofrecer productos naturales, saludables y de proximidad a nuestros clientes.
+            </p>
+
+            <p>
+                Trabajamos utilizando métodos de cultivo sostenibles, respetando el medio ambiente y garantizando la máxima calidad en cada cosecha.
+            </p>
+
+        </section>
+
+        <!-- PRODUCTOS -->
+
+        <section id="productos">
+
+            <h2>Productos de Temporada</h2>
+
+            <article>
+
+                <img src="img/tomates.jpg" alt="Tomates frescos">
+
+                <h3>Tomates</h3>
+
+                <p>
+                    Tomates cultivados de forma natural y recogidos en su punto óptimo de maduración.
+                </p>
+
+            </article>
+
+            <article>
+
+                <img src="img/lechugass.jpg" alt="Lechugas frescas">
+
+                <h3>Lechugas</h3>
+
+                <p>
+                    Lechugas frescas y crujientes ideales para una alimentación saludable.
+                </p>
+
+            </article>
+
+            <article>
+
+                <img src="img/zanahorias.jpg" alt="Zanahorias frescas">
+
+                <h3>Zanahorias</h3>
+
+                <p>
+                    Zanahorias de temporada cultivadas con métodos respetuosos con el medio ambiente.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!-- BENEFICIOS -->
+
+        <section id="beneficios">
+
+            <h2>Beneficios del Consumo Local</h2>
+
+            <article>
+
+                <h3>Productos más frescos</h3>
+
+                <p>
+                    Nuestras verduras se recolectan y entregan en poco tiempo,
+                    conservando mejor su sabor y propiedades.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Apoyo a los agricultores locales</h3>
+
+                <p>
+                    Comprando directamente a la finca ayudas a la economía local
+                    y a las pequeñas explotaciones agrícolas.
+                </p>
+
+            </article>
+
+            <article>
+
+                <h3>Menor impacto ambiental</h3>
+
+                <p>
+                    Reducimos el transporte y las emisiones apostando por productos de cercanía.
+                </p>
+
+            </article>
+
+        </section>
+
+        <!-- GALERÍA -->
+
+        <section id="galeria">
+
+            <h2>Galería de Imágenes</h2>
+
+            <img src="img/fresh harvest.jpg" alt="Cultivos de la finca">
+
+            <img src="img/organic food box.jpg" alt="Verduras frescas">
+
+            <img src="img/caja verduras.jpg" alt="Caja de verduras">
+
+            <img src="img/farmer working fields.png" alt="Agricultor trabajando">
+
+        </section>
+
+
+<!-- RESERVA TU CAJA -->
+
+<section id="reserva">
+
+<img src="img/caja formulario.png" alt="Reserva tu Caja" class="imagen-reserva">
+
+    <h2>Reserva tu Caja</h2>
+
+    <p class="texto-reserva">
+    Reserva tu caja de verduras frescas de temporada.
+    Nos pondremos en contacto contigo para coordinar la entrega o recogida.
+    </p>
+
+
+
+<form id="formulario">
+
+    <label for="nombre">👤 Nombre</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <label for="correo">📧 Correo Electrónico</label>
+    <input type="email" id="correo" name="correo">
+
+    <label for="telefono">📞 Teléfono</label>
+    <input type="tel" id="telefono" name="telefono">
+
+    <label for="password">🔒 Contraseña</label>
+    <input type="password" id="password" name="password">
+    <p id="contador">Caracteres: 0</p>
+
+    <label>
+        <input type="checkbox" id="mostrarPassword">
+        Mostrar contraseña
+    </label>
+        <button type="submit" id="btnEnviar">
+            Enviar Reserva
+        </button>
+
+</form>
+
+
+</section>
+
+<!-- CONTACTO -->
+
+<section id="contacto">
+
+
+<h2>Contacto</h2>
+
+<p><strong>Teléfono:</strong> 922 000 000</p>
+
+<p><strong>Email:</strong> info@fincaelsembrador.com</p>
+
+<p><strong>Dirección:</strong> Tenerife, Islas Canarias</p>
+
+
+</section>
+
+<!-- FOOTER -->
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-contenido">
+
+        <h3>Finca El Sembrador</h3>
+
+        <p>
+            Verduras frescas de temporada cultivadas de forma sostenible.
+        </p>
+
+        <p>
+            📍 Tenerife, Islas Canarias
+        </p>
+
+        <p>
+            📞 922 000 000
+        </p>
+
+        <p>
+            📧 info@fincaelsembrador.com
+        </p>
+
+        <nav>
+
+            <a href="aviso_legal.html">Aviso Legal</a>
+
+            <a href="privacidad.html">Política de Privacidad</a>
+
+            <a href="#">Política de Cookies</a>
+
+        </nav>
+
+        <p>
+            © 2026 Finca El Sembrador - Todos los derechos reservados
+        </p>
+
+    </div>
+
+</footer>
+
+</main>
+
+<button id="volverArriba">⬆</button>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
